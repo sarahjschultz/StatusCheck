@@ -16,6 +16,8 @@ gem 'spring', group: :development
 gem 'haml', '~> 4.0.6'
 gem 'haml-rails', '~> 0.8.2'
 
+gem 'pry', '~> 0.10.1'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.2.1'
 end

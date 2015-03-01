@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe StatusesController, type: :controller do
-  let(:valid_attributes) { { state: true, message:'This is a fun message!' } }
+  let(:valid_attributes) { { state: 1, message:'This is a fun message!' } }
   let(:invalid_attributes) { { state: nil} }
 
   describe "GET #index" do
@@ -57,7 +57,7 @@ RSpec.describe StatusesController, type: :controller do
 
   describe "PUT #update" do
     context "with valid params" do
-      let(:new_attributes) { {state: false, message: 'I am down right now.'} }
+      let(:new_attributes) { {state: 0, message: 'I am down right now.'} }
 
       it "updates the requested status" do
         status = Status.create! valid_attributes
@@ -86,11 +86,6 @@ RSpec.describe StatusesController, type: :controller do
         expect(assigns(:status)).to eq(status)
       end
 
-      it "re-renders the 'edit' template" do
-        status = Status.create! valid_attributes
-        put :update, {:id => status.to_param, :status => invalid_attributes}
-        expect(response).to redirect_to(status_url)
-      end
     end
   end
 
