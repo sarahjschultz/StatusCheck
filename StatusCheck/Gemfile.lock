@@ -157,6 +157,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   shoulda-matchers
+  simple_enum (~> 2.1.1)
   spring
   sqlite3
   turbolinks
