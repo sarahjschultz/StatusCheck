@@ -55,6 +55,8 @@ class StatusesController < ApplicationController
     end
 
     def status_params
-      params.require(:status).permit(:state, :message)
+      params.require(:status).permit(:state, :message).tap do |w|
+        w[:state] = w[:state].to_i if w[:state]
+      end
     end
 end

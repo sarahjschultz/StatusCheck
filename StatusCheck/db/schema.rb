@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150301205833) do
+ActiveRecord::Schema.define(version: 20150301231336) do
 
   create_table "statuses", force: true do |t|
     t.integer  "state",      limit: 1, default: 0, null: false
