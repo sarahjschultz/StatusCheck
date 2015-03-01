@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150301054721) do
+ActiveRecord::Schema.define(version: 20150301205833) do
 
   create_table "statuses", force: true do |t|
-    t.boolean  "state"
+    t.integer  "state",      limit: 1, default: 0, null: false
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
