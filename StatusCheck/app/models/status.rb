@@ -1,8 +1,13 @@
 class Status < ActiveRecord::Base
+  after_initialize :default_state
 
-  enum state: { up:0, down:1 }
+  enum state: { up: 0, down: 1 }
 
   validates_presence_of :state
-  validates_presence_of :message
+
+  def default_state
+    self.state ||= Status.last.state
+  end
 
 end
+
