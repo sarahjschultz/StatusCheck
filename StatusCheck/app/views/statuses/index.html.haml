@@ -1,23 +1,20 @@
-%h1 Listing statuses
-
-%table
-  %thead
-    %tr
-      %th State
-      %th Message
-      %th
-      %th
-      %th
-      
-  %tbody
-    - @statuses.each do |status|
-      %tr
-        %td= status.state
-        %td= status.message
-        %td= link_to 'Show', status
-        %td= link_to 'Edit', edit_status_path(status)
-        %td= link_to 'Destroy', status, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
+%div.container
+  %h1 StatusCheck for Litmus App
+  %h5.text-muted Is it up? Is it down?
 %br
 
-= link_to 'New Status', new_status_path
+%div.container
+  %table.table.table-bordered
+    %thead
+      %tr
+        %th State
+        %th Message
+        %th Posted At
+
+    %tbody
+      - @statuses.each do |status|
+        %tr
+          %td.text-uppercase= status.state
+          %td= status.message
+          %td= status.created_at
+
