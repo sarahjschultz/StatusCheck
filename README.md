@@ -1,16 +1,16 @@
-### StatusCheck README
+# StatusCheck
 
-#### About
+### About
 
-StatusCheck is a small project for the Litmus team. The idea is to provide an API which allows command-line updates via cURL, which will populate a list viewable in the browser.
+StatusCheck is a simple application reporting service. The idea is to provide an API which allows command-line updates via cURL, populating a single page application in the browser.
 
-This list will display the 'Status' of the theoretical LitmusApp, via state (UP/DOWN) and an associated message(i.e., 'We've been hacked!').
+This list will display the 'Status', via state (UP/DOWN) and an associated message(i.e., 'We've been hacked!').
 
 #### Dev Setup
 1. Clone this repo, locally:<p>
-`git clone git@github.com:sarahjschultz/Litmus_TakeHome.git`
+`git clone git@github.com:sarahjschultz/StatusCheck.git`
 2. Move to the StatusCheck directory:<p>
-`cd Litmus_TakeHome/StatusCheck/`
+`cd StatusCheck/StatusCheck/`
 3. Update your bundle:<p>
 `bundle install`
 4. Start your Rails server:<p>
@@ -25,14 +25,14 @@ curl -X POST -H "Content-Type: application/json" -d '{"status": {"state": "0", "
 `bundle exec rspec`
 
 #### Things To Know!
-1. State is either Up or Down, meaning either: (1)the Litmus App is Up or (2) the Litmus App is Down. Currently this is represented by UP = 0, Down = 1. You must pass in either state = 0, or state = 1 to set the current state.
-
+1. State is either Up or Down. Currently this is represented by UP = 0, Down = 1. You must pass in either state = 0, or state = 1 to set the current state.
 2. If you only pass in a Message, the State value will default to that of the last posted Status.
-
 3. Message is optional!
 
-4. We've done very little in the way of necessary authentication, because this application will not run LIVE on the world-wide-web. We are very aware that we do not have suitable protection against evildoers.
-
-#### Nice-to-Have List:
+#### TODO:
 1. Remove extraneous views/controller actions/javascripts/Rails-new-bloat.
 2. Allow API to accept `state` values that are human readable(i.e., "up" or "down") instead of current integer settings
+3. JSON in, JSON out (but fetching the status should still be public)
+4. Authentication
+5. Heroku
+6. Use latest stable versions of Ruby (the language) and Rails (the framework)
