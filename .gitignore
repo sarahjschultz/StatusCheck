@@ -18,5 +18,3 @@ StatusCheck/tmp
 #Ignore all idea files
 .idea/*
 
-#Ignore Gemfile.lock
-StatusCheck/Gemfile.lock
