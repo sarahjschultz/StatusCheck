@@ -12,7 +12,8 @@ To set up the project locally, follow the steps in our [Wiki](https://github.com
 ### Using StatusCheck
 1. State: Up or Down
 2. Message (optional): Relevant text about your status
-3. You may only pass a Message, but note that the State value will default to that of the last posted Status.
+3. You may opt to only pass in a State, and your update will appear without any Message.
+4. You may opt to only pass in a Message, but note that the State value will default to that of the last posted Status.
 
 #### TODO:
 1. Remove extraneous views/controller actions/javascripts/Rails-new-bloat.
