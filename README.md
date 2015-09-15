@@ -17,8 +17,7 @@ Example requests can also be found in our [Wiki](https://github.com/sarahjschult
 4. You may opt to only pass in a Message, but note that the State value will default to that of the last posted Status.
 
 #### TODO:
-1. Remove extraneous views/controller actions/javascripts/Rails-new-bloat.
+1. JSON in, JSON out (but fetching the status should still be public)
 2. Allow API to accept `state` values that are human readable(i.e., "up" or "down") instead of current integer settings
-3. JSON in, JSON out (but fetching the status should still be public)
-4. Authentication
-5. Heroku
+3. Authentication
+4. Heroku
