@@ -5,15 +5,15 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-StatusCheck/.bundle
+.bundle
 
 # Ignore the default SQLite database.
-StatusCheck/db/*.sqlite3
-StatusCheck/db/*.sqlite3-journal
+db/*.sqlite3
+db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-StatusCheck/log/*.log
-StatusCheck/tmp
+log/*.log
+tmp
 
 #Ignore all idea files
 .idea/*
