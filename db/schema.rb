@@ -13,8 +13,8 @@
 
 ActiveRecord::Schema.define(version: 20150302053208) do
 
-  create_table "statuses", force: true do |t|
-    t.integer  "state",      limit: 1, null: false
+  create_table "statuses", force: :cascade do |t|
+    t.integer  "state"
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"

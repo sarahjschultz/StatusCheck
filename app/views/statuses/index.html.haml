@@ -1,5 +1,5 @@
 %div.container
-  %h1 StatusCheck for Litmus App
+  %h1 StatusCheck
   %h5.text-muted Is it up? Is it down?
 %br
 
@@ -7,9 +7,9 @@
   %table.table.table-bordered
     %thead
       %tr
-        %th Litmus App Is:
-        %th Status Message:
-        %th Status Posted At:
+        %th App Is:
+        %th Message:
+        %th Posted At:
 
     %tbody
       - @statuses.each do |status|
