@@ -11,6 +11,7 @@ To set up the project locally, follow the steps in our [Wiki](https://github.com
 
 ### Using StatusCheck
 Example requests can also be found in our [Wiki](https://github.com/sarahjschultz/StatusCheck/wiki/Sample-Requests)
+
 1. State (optional): Up or Down
 2. Message (optional): Relevant text about your status
 3. You may opt to only pass in a State, and your update will appear without any Message.
