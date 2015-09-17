@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150302053208) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "statuses", force: :cascade do |t|
     t.integer  "state"
     t.text     "message"

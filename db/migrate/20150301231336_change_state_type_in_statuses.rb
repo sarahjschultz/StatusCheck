@@ -1,5 +1,5 @@
 class ChangeStateTypeInStatuses < ActiveRecord::Migration
   def change
-    change_column :statuses, :state, :integer, default: 0
+    change_column :statuses, :state, 'integer USING CAST(state AS integer)'
   end
 end
